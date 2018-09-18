@@ -25,23 +25,21 @@ namespace WinFormApp
 
         private void btnSum_Click(object sender, EventArgs e)
         {
-            //string str = "123A"
-            //int res;
-            //if (int.TryParse(str, out res))
-            //    Console.WriteLine("Parsed Val: " + res);
-            //else
-            //    Console.WriteLine("Couldn't Parsed Val: " + str);
+            if(sender == this.btnSub)
+                MessageBox.Show("Subtract Button Pressed!");
+            else if (sender == this.btnSum)
+                MessageBox.Show("Sum Button Pressed!");
 
-            int v1, v2;
-            if (int.TryParse(this.txtVal1.Text, out v1)
-                && int.TryParse(this.txtVal2.Text, out v2))
-            {
-                this.lblResult.Text = (v1 + v2).ToString();
-            }
-            else
-            {
-                MessageBox.Show("Input Values are not a Number");
-            }
+            //int v1, v2;
+            //if (int.TryParse(this.txtVal1.Text, out v1)
+            //    && int.TryParse(this.txtVal2.Text, out v2))
+            //{
+            //    this.lblResult.Text = (v1 + v2).ToString();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Input Values are not a Number");
+            //}
         }
 
         private void txtVal1_Leave(object sender, EventArgs e)

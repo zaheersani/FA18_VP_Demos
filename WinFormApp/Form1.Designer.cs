@@ -34,6 +34,7 @@
             this.txtVal2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
+            this.btnSub = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSum
@@ -41,13 +42,13 @@
             this.btnSum.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSum.FlatAppearance.BorderSize = 3;
-            this.btnSum.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSum.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSum.Location = new System.Drawing.Point(120, 51);
+            this.btnSum.Location = new System.Drawing.Point(120, 65);
             this.btnSum.Name = "btnSum";
-            this.btnSum.Size = new System.Drawing.Size(68, 38);
+            this.btnSum.Size = new System.Drawing.Size(40, 35);
             this.btnSum.TabIndex = 2;
-            this.btnSum.Text = "Sum";
+            this.btnSum.Text = "+";
             this.btnSum.UseVisualStyleBackColor = false;
             this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
             // 
@@ -98,16 +99,32 @@
             this.lblResult.TabIndex = 2;
             this.lblResult.Text = "0";
             // 
+            // btnSub
+            // 
+            this.btnSub.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSub.FlatAppearance.BorderSize = 3;
+            this.btnSub.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSub.Location = new System.Drawing.Point(120, 26);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(40, 35);
+            this.btnSub.TabIndex = 2;
+            this.btnSub.Text = "-";
+            this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.btnSum_Click);
+            // 
             // FormCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 147);
+            this.ClientSize = new System.Drawing.Size(213, 165);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtVal2);
             this.Controls.Add(this.txtVal1);
+            this.Controls.Add(this.btnSub);
             this.Controls.Add(this.btnSum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -129,6 +146,7 @@
         private System.Windows.Forms.TextBox txtVal2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnSub;
     }
 }
 
