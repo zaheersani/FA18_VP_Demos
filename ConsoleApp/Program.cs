@@ -1,11 +1,16 @@
 ﻿using System;
 
-namespace BCS6AVisualProgrammingDemos
+namespace ConsoleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Program p = new Program();
+            p.ClassesTest();
+            Console.ReadKey();
+            return;
+
             Console.WriteLine("My First C# Program!");
             Console.WriteLine("No. of Arguments: " + args.Length);
 
@@ -16,5 +21,18 @@ namespace BCS6AVisualProgrammingDemos
             }
             Console.ReadKey();
         }
+
+        public void ClassesTest()
+        {
+            Student s1 = new Student("Saira","SP16-BCS-008",21);
+            Student s2 = new Student("Talha", "SP16-BCS-012", 21);
+            s1.Address = "Some address";
+            Console.WriteLine("Name of student1: " + s1.Name);
+            Console.WriteLine("Address " + s1.Address);
+
+            s1.Name = Console.ReadLine();
+            Console.WriteLine("Name of student1 after Modification: " + s1.Name);
+        }
+
     }
 }
