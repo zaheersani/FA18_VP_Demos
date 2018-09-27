@@ -24,14 +24,42 @@ namespace ConsoleApp
 
         public void ClassesTest()
         {
-            Student s1 = new Student("Saira","SP16-BCS-008",21);
-            Student s2 = new Student("Talha", "SP16-BCS-012", 21);
-            s1.Address = "Some address";
-            Console.WriteLine("Name of student1: " + s1.Name);
-            Console.WriteLine("Address " + s1.Address);
+            Student s1 = new Student()
+            {
+                FirstName = "Talha",
+                LastName = "Iqbal",
+                RegNo = "SP15-BCS-098"
+            };
+            Student s3 = new Student()
+            {
+                FirstName = "Abc",
+                LastName = "xyz",
+                RegNo = "SP15-BCS-098"
+            };
+            Student s2 = new Student();
 
-            s1.Name = Console.ReadLine();
-            Console.WriteLine("Name of student1 after Modification: " + s1.Name);
+            Person p = s1;
+            p = new Employee()
+            {
+                FirstName = "Zaheer",
+                Designation = "Lecturer"
+            };
+
+            Console.WriteLine(p.ConvertToString());
+
+            Console.WriteLine(s1.isEqual(s2));
+            return;
+            
+            Console.WriteLine(s1.ToString());
+            Console.WriteLine(s2.ToString());
+            //Student s1 = new Student("Saira","SP16-BCS-008",21);
+            //Student s2 = new Student("Talha", "SP16-BCS-012", 21);
+            //s1.Address = "Some address";
+            //Console.WriteLine("Name of student1: " + s1.Name);
+            //Console.WriteLine("Address " + s1.Address);
+
+            //s1.Name = Console.ReadLine();
+            //Console.WriteLine("Name of student1 after Modification: " + s1.Name);
         }
 
     }
