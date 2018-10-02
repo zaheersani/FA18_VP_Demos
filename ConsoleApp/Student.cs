@@ -41,29 +41,31 @@ namespace ConsoleApp
 
     public class Student : Person, IPerson<Student>
     {
-        public string RegNo { get; set; }
+        //public string RegNo { get; set; }
+        public RegNo RegistrationNo { get; set; }
         public string Department { get; set; }
 
         public Student() : base()
         {
-            this.RegNo = this.Department = "Not Initialized";
+            this.Department = "Not Initialized";
         }
 
-        public Student(string FirstName, string LastName, DateTime Age, string Address, string RegNo, string Department)
+        public Student(string FirstName, string LastName, DateTime Age, string Address, RegNo RegNo, string Department)
             : base(FirstName,LastName,Age,Address)
         {
-            this.RegNo = RegNo;
+            this.RegistrationNo = RegNo;
             this.Department = Department;
         }
 
         public override string ToString()
         {
-            return this.FirstName + " " + this.LastName + "\n" + this.RegNo;
+            return this.FirstName + " " + this.LastName + "\n" + this.RegistrationNo.ToString();
         }
 
         public bool isEqual(Student sObj)
         {
-            if(this.RegNo == sObj.RegNo)
+            // TODO: Complete the comparison with other fields of RegNo class
+            if(this.RegistrationNo.Session == sObj.RegistrationNo.Session)
                 return true;
             return false;
         }
@@ -100,4 +102,22 @@ namespace ConsoleApp
         public string Name { get; set; }
         public string Address { get; set; }
     }
+
+
+    public enum Session { Fall, Spring }
+
+    public class RegNo
+    {
+        public Session Session { get; set; }
+        public byte Year { get; set; }
+        public string Program { get; set; }
+        public string RollNo { get; set; }
+
+        public override string ToString()
+        {
+            // TODO: Return complete reg no in FA11-BCS-098 format
+            return this.Session.ToString() + this.Year;
+        }
+    }
+
 }

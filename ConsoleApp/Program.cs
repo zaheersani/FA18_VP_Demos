@@ -28,13 +28,28 @@ namespace ConsoleApp
             {
                 FirstName = "Talha",
                 LastName = "Iqbal",
-                RegNo = "SP15-BCS-098"
+                RegistrationNo = new RegNo() 
+                { 
+                    Session = Session.Fall,
+                    Year = 12,
+                    Program = "BCS",
+                    RollNo = "006"
+                }
             };
+            
+            Console.WriteLine(s1);
+
             Student s3 = new Student()
             {
                 FirstName = "Abc",
                 LastName = "xyz",
-                RegNo = "SP15-BCS-098"
+                RegistrationNo = new RegNo()
+                {
+                    Session = Session.Spring,
+                    Year = 12,
+                    Program = "BSE",
+                    RollNo = "006"
+                }
             };
             Student s2 = new Student();
 
@@ -47,7 +62,7 @@ namespace ConsoleApp
 
             Console.WriteLine(p.ConvertToString());
 
-            Console.WriteLine(s1.isEqual(s2));
+            //Console.WriteLine(s1.isEqual(s2));
             return;
             
             Console.WriteLine(s1.ToString());
