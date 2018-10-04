@@ -36,7 +36,6 @@ namespace ConsoleApp
         /// </summary>
         /// <returns>String representation of the object</returns>
         public abstract string ConvertToString();
-
     }
 
     public class Student : Person, IPerson<Student>
@@ -102,8 +101,7 @@ namespace ConsoleApp
         public string Name { get; set; }
         public string Address { get; set; }
     }
-
-
+    
     public enum Session { Fall, Spring }
 
     public class RegNo

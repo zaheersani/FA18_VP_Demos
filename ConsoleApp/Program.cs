@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System;
 
 namespace ConsoleApp
 {
@@ -6,6 +7,58 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Box b1 = new Box()
+            {
+                Breadth = 50, Height = 50, Length = 50
+            };
+
+            Box b2 = new Box()
+            {
+                Breadth = 50,
+                Height = 50,
+                Length = 50
+            };
+
+            if (b1 == b2)
+                Console.WriteLine("Both Boxes are indentical");
+            else
+                Console.WriteLine("Both Boxes are NOT indentical");
+            Console.ReadKey();
+            return;
+
+            Contact c1 = new Contact()
+            {
+                Name = "Ahmed Ali", Number = "03334243242"
+            };
+            Contact c2 = new Contact()
+            {
+                Name = "Muhammad Ahmed Khan",
+                Number = "0334890808"
+            };
+            PhoneBook phBookObj = new PhoneBook();
+            phBookObj.AddContact(c1);
+            phBookObj.AddContact(c2);
+            phBookObj.AddContact(new Contact() 
+            { 
+                Name = "Ali Hasnain", Number = "030032432424"
+            });
+            foreach (Contact item in phBookObj.GetAllContacts)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Accessing through indexes!");
+            Console.WriteLine(phBookObj["ALI"]);
+            
+            Console.WriteLine("Number Search indexes!");
+            List<Contact> cList = phBookObj["033", ContactFilter.Number];
+            foreach (Contact item in cList)
+            {
+                Console.WriteLine(item);
+            }
+            
+            Console.ReadKey();
+            return;
+
             Program p = new Program();
             p.ClassesTest();
             Console.ReadKey();
@@ -51,6 +104,7 @@ namespace ConsoleApp
                     RollNo = "006"
                 }
             };
+
             Student s2 = new Student();
 
             Person p = s1;
