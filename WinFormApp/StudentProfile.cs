@@ -17,15 +17,31 @@ namespace WinFormApp
         public StudentProfile()
         {
             InitializeComponent();
+            Student s1 = new Student()
+            {
+                FirstName = "Talha",
+                LastName = "Iqbal",
+                RegistrationNo = new RegNo()
+                {
+                    Session = Session.Fall,
+                    Year = 12,
+                    Program = "BCS",
+                    RollNo = "006"
+                }
+            };
+            List<Student> sList = new List<Student>();
+            sList.Add(s1);
+            this.dataGridView1.DataSource = sList.ToList();
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Student sObj = new Student()
-            {
-                Name = this.txtName.Text
-            };
-            MessageBox.Show("Student Name: " + sObj.Name);
+            //Student sObj = new Student()
+            //{
+            //    Name = this.txtName.Text
+            //};
+            //MessageBox.Show("Student Name: " + sObj.Name);
         }
     }
 }

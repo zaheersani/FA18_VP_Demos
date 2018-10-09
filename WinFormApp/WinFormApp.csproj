@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackgroundWorkerDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackgroundWorkerDemo.Designer.cs">
+      <DependentUpon>BackgroundWorkerDemo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonControls.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="StudentProfile.Designer.cs">
       <DependentUpon>StudentProfile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BackgroundWorkerDemo.resx">
+      <DependentUpon>BackgroundWorkerDemo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommonControls.resx">
       <DependentUpon>CommonControls.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,7 +16,7 @@ namespace WinFormApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentProfile());
+            Application.Run(new BackgroundWorkerDemo());
         }
     }
 }
