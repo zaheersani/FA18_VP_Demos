@@ -71,6 +71,12 @@
     <Compile Include="StudentProfile.Designer.cs">
       <DependentUpon>StudentProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThreadClassDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThreadClassDemo.Designer.cs">
+      <DependentUpon>ThreadClassDemo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BackgroundWorkerDemo.resx">
       <DependentUpon>BackgroundWorkerDemo.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="StudentProfile.resx">
       <DependentUpon>StudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreadClassDemo.resx">
+      <DependentUpon>ThreadClassDemo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

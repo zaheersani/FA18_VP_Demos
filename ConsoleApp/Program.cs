@@ -7,6 +7,10 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            (new Activity()).WhatToDoToday(DayOfWeek.Sunday);
+            Console.ReadKey();
+            return;
+
             Box b1 = new Box()
             {
                 Breadth = 50, Height = 50, Length = 50

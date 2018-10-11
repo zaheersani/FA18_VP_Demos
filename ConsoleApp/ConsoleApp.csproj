@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegateDemo.cs" />
     <Compile Include="OperatorOverloading.cs" />
     <Compile Include="PhoneBook.cs" />
     <Compile Include="Program.cs" />
