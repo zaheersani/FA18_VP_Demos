@@ -1,0 +1,31 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApp.Containers"
+        Title="Containers" Height="300" Width="419.549">
+    <Window.Resources>
+        <ControlTemplate x:Key="ListBoxControlTemplate1" TargetType="{x:Type ListBox}">
+            <Grid Margin="0,0,-101,5">
+                <Button Name="btn" Content="Button" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Width="75"/>
+                <CheckBox Name="check" Content="CheckBox" HorizontalAlignment="Left" Margin="0,13,0,0" VerticalAlignment="Top" Width="46"/>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Expander Header="Education" HorizontalAlignment="Left" Margin="94,23,0,0" VerticalAlignment="Top">
+            <Grid Background="#FFE5E5E5" Width="296" Height="189">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="71" Margin="0,25,0,0">
+                    <Button Content="Button" Margin="2,2,2,2"/>
+                    <Button Content="Button" Margin="2,2,2,2"/>
+                    <Button Content="Button" Margin="2,2,2,2"/>
+                    <Button Content="Button" Margin="2,2,2,2"/>
+                </StackPanel>
+            </Grid>
+        </Expander>
+        <ListBox Name="list" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,108,0,0" Template="{DynamicResource ListBoxControlTemplate1}"/>
+
+    </Grid>
+</Window>
