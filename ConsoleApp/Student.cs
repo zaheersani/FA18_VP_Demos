@@ -58,7 +58,7 @@ namespace ConsoleApp
 
         public override string ToString()
         {
-            return this.FirstName + " " + this.LastName + "\n" + this.RegistrationNo.ToString();
+            return this.FirstName + " " + this.LastName + " " + this.RegistrationNo.ToString();
         }
 
         public bool isEqual(Student sObj)
@@ -114,7 +114,7 @@ namespace ConsoleApp
         public override string ToString()
         {
             // TODO: Return complete reg no in FA11-BCS-098 format
-            return this.Session.ToString() + this.Year;
+            return this.Session.ToString() + this.Year + "-" + this.Program + "-" + this.RollNo;
         }
     }
 
