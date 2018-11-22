@@ -122,6 +122,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClassesHospitalDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesHospitalDB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="LINQBasics.xaml.cs">
       <DependentUpon>LINQBasics.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -190,7 +195,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HospitalDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HospitalDB_log.ldf">
+      <DependentUpon>HospitalDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
