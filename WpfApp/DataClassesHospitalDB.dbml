@@ -1,11 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HospitalDB" Class="DataClassesHospitalDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\HospitalDB.mdf;Integrated Security=True" SettingsObjectName="WpfApp.Properties.Settings" SettingsPropertyName="HospitalDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Appointment" Member="Appointments">
+    <Type Name="Appointment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AppointmentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AppointmentTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Association Name="Patient_Appointment" Member="Patient" ThisKey="pID" OtherKey="Id" Type="Patient" IsForeignKey="true" />
+      <Association Name="Doctor_Appointment" Member="Doctor" ThisKey="dID" OtherKey="Id" Type="Doctor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Patient_Appointment" Member="Appointments" ThisKey="Id" OtherKey="pID" Type="Appointment" />
+    </Type>
+  </Table>
   <Table Name="dbo.Doctors" Member="Doctors">
     <Type Name="Doctor">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Specialization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Doctor_Appointment" Member="Appointments" ThisKey="Id" OtherKey="dID" Type="Appointment" />
     </Type>
   </Table>
   <Table Name="dbo.[user]" Member="users">

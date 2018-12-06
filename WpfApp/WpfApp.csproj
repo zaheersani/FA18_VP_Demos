@@ -120,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LINQJoins.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataClassesHospitalDB.designer.cs">
@@ -133,6 +137,10 @@
     </Compile>
     <Compile Include="LINQDB.xaml.cs">
       <DependentUpon>LINQDB.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LINQJoins.xaml.cs">
+      <DependentUpon>LINQJoins.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
