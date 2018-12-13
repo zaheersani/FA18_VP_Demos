@@ -29,5 +29,30 @@ namespace WebAppPart_I.Controllers
 
             return View("ListofStudents", sObj);
         }
+
+        public ActionResult Search(int? id)
+        {
+            ViewBag.id = id.ToString();
+            return View();
+        }
+
+        public ActionResult Add()
+        {
+            return View("Create");
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(Student sObj)
+        {
+            Console.WriteLine(sObj.Name);
+            return View("Display", sObj);
+        }
+
+
 	}
 }

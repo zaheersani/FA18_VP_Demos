@@ -9,5 +9,6 @@ namespace WebAppPart_I.Models
     {
         public string Name { get; set; }
         public string RegNo { get; set; }
+        public int? Age { get; set; }
     }
 }

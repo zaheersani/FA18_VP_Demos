@@ -1,0 +1,17 @@
+﻿@model WebAppPart_I.Models.Student
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add a New Student</h2>
+
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(m => Model.Name) <br />
+        @Html.EditorFor(m => Model.Name)
+        <input type="submit" name="Submit" value="Add Student" />
+    </p>
+}
+
