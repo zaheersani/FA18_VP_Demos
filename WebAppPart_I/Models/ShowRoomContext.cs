@@ -20,6 +20,10 @@ namespace WebAppPart_I.Models
         }
 
         public System.Data.Entity.DbSet<WebAppPart_I.Models.Car> Cars { get; set; }
+
+        public System.Data.Entity.DbSet<WebAppPart_I.Models.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<WebAppPart_I.Models.Order> Orders { get; set; }
     
     }
 }
