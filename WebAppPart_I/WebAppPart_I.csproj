@@ -183,6 +183,18 @@
     <Compile Include="Migrations\201812180448598_CustomerModelDataAnn.Designer.cs">
       <DependentUpon>201812180448598_CustomerModelDataAnn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812200401085_RelUpdated.cs" />
+    <Compile Include="Migrations\201812200401085_RelUpdated.Designer.cs">
+      <DependentUpon>201812200401085_RelUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812200446523_OrderModelUpdated.cs" />
+    <Compile Include="Migrations\201812200446523_OrderModelUpdated.Designer.cs">
+      <DependentUpon>201812200446523_OrderModelUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812200453383_OrderModelUpdated2.cs" />
+    <Compile Include="Migrations\201812200453383_OrderModelUpdated2.Designer.cs">
+      <DependentUpon>201812200453383_OrderModelUpdated2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ShowroomModels.cs" />
@@ -284,6 +296,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812180448598_CustomerModelDataAnn.resx">
       <DependentUpon>201812180448598_CustomerModelDataAnn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812200401085_RelUpdated.resx">
+      <DependentUpon>201812200401085_RelUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812200446523_OrderModelUpdated.resx">
+      <DependentUpon>201812200446523_OrderModelUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812200453383_OrderModelUpdated2.resx">
+      <DependentUpon>201812200453383_OrderModelUpdated2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

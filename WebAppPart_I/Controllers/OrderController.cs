@@ -17,7 +17,8 @@ namespace WebAppPart_I.Controllers
         // GET: /Order/
         public ActionResult Index()
         {
-            return View(db.Orders.ToList());
+            var orders = db.Orders.Include(o => o.Car).Include(o => o.Customer);
+            return View(orders.ToList());
         }
 
         // GET: /Order/Details/5
@@ -38,6 +39,8 @@ namespace WebAppPart_I.Controllers
         // GET: /Order/Create
         public ActionResult Create()
         {
+            ViewBag.CarID = new SelectList(db.Cars, "ID", "Manufacturer");
+            ViewBag.CustomerID = new SelectList(db.Customers, "ID", "Name");
             return View();
         }
 
@@ -46,7 +49,7 @@ namespace WebAppPart_I.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,CarID,CustomerID")] Order order)
+        public ActionResult Create([Bind(Include="ID,CarID,CustomerID,SalePrice,PurchasedOn")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +58,8 @@ namespace WebAppPart_I.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CarID = new SelectList(db.Cars, "ID", "Manufacturer", order.CarID);
+            ViewBag.CustomerID = new SelectList(db.Customers, "ID", "Name", order.CustomerID);
             return View(order);
         }
 
@@ -70,6 +75,8 @@ namespace WebAppPart_I.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CarID = new SelectList(db.Cars, "ID", "Manufacturer", order.CarID);
+            ViewBag.CustomerID = new SelectList(db.Customers, "ID", "Name", order.CustomerID);
             return View(order);
         }
 
@@ -78,7 +85,7 @@ namespace WebAppPart_I.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,CarID,CustomerID")] Order order)
+        public ActionResult Edit([Bind(Include="ID,CarID,CustomerID,SalePrice,PurchasedOn")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +93,8 @@ namespace WebAppPart_I.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.CarID = new SelectList(db.Cars, "ID", "Manufacturer", order.CarID);
+            ViewBag.CustomerID = new SelectList(db.Customers, "ID", "Name", order.CustomerID);
             return View(order);
         }
 

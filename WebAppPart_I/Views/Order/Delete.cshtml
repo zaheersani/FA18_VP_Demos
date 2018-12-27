@@ -12,19 +12,35 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CarID)
+            @Html.DisplayNameFor(model => model.Car.Manufacturer)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CarID)
+            @Html.DisplayFor(model => model.Car.Manufacturer)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CustomerID)
+            @Html.DisplayNameFor(model => model.Customer.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CustomerID)
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchasedOn)
         </dd>
 
     </dl>
